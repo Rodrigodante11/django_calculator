@@ -1,8 +1,5 @@
 
 def calculator(consumption: list, distributor_tax: float, tax_type: str) -> tuple:
-    print(consumption)
-    print(distributor_tax)
-    print(tax_type)
 
     annual_savings = 0
     monthly_savings = 0
