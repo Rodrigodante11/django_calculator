@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class=container">
+        <div class="card">
+             <form action="{% url 'calculator_request' %}" method="POST" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  <div class="col-sm-6 mt-2">
+                      <label for="valor1">Consumo primeiro mes</label>
+                      <input id="inputValor1" type="number" class="form-control"  placeholder="Consumo primeiro mes" name="valor1">
+                  </div>
+
+                  <div class="col-sm-6 mt-2">
+                      <label for="valor2">Consumo segundo mes</label>
+                      <input id="inputValor2" type="number" class="form-control"  placeholder="Consumo segundo mes" name="valor2">
+                  </div>
+
+                 <div class="col-sm-6 mt-2">
+                      <label for="valor1">Consumo terceiro mes</label>
+                      <input id="inputValor3" type="number" class="form-control"  placeholder="Consumo terceiro mes" name="valor3">
+                  </div>
+
+                  <div class="col-sm-6 mt-2">
+                      <label for="tarifa ">Valor da tarifa da distribuidora</label>
+                      <input id="tarifa " type="number" class="form-control"  placeholder="Valor da tarifa da distribuidora" name="tarifa">
+                  </div>
+
+
+                    <label for="tipo">Tipo de Tarifa</label>
+                    <select class="form-control" name="tipo" id="select-tipo" >
+                        <option>Comercial</option>
+                        <option>Residencial </option>
+                        <option>Industrial</option>
+                    </select>
+
+                 <div id="botao_submit" hx-swap-oob="true" class="mt-4">
+                    <button id="button-criar" class="w-100 btn btn-primary btn-lg" type="submit"> Cadastrar </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
